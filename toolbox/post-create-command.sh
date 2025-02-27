@@ -15,7 +15,10 @@ WORKSPACE_PATH=$1
 
 LAYER_DIRECTORY=${WORKSPACE_PATH}/meta-emblincram
 
+echo "copy toolbox functions"
 ${LAYER_DIRECTORY}/toolbox/copy-tools.sh ${LAYER_DIRECTORY}/toolbox ${WORKSPACE_PATH}/build 
+
+echo "copy environment activation script"
 cp ${LAYER_DIRECTORY}/toolbox/activate-env.sh ${WORKSPACE_PATH}/
 
 echo 'emblincram dev-container ready.'
