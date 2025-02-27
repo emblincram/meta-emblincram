@@ -1,0 +1,12 @@
+[Unit]
+Description=Lightweight DHCP and caching DNS server
+After=network.target
+Wants=sys-subsystem-net-devices-usb0.device
+
+[Service]
+ExecStart=/usr/bin/dnsmasq -k
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

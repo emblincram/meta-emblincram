@@ -1,0 +1,25 @@
+From c31cd320c99a3ce462ed5f93fefe2245ad79c372 Mon Sep 17 00:00:00 2001
+From: Roman Koch <koch.roman@gmail.com>
+Date: Thu, 6 Feb 2025 19:24:35 +0100
+Subject: [PATCH] Set finduuid to mmc 1:2 and change boot_targets
+
+---
+ include/configs/am335x_evm.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/configs/am335x_evm.h b/include/configs/am335x_evm.h
+index 5b477785174..93bb7372a8a 100644
+--- a/include/configs/am335x_evm.h
++++ b/include/configs/am335x_evm.h
+@@ -81,7 +81,7 @@
+ #define CFG_EXTRA_ENV_SETTINGS \
+ 	DEFAULT_LINUX_BOOT_ENV \
+ 	"fdtfile=undefined\0" \
+-	"finduuid=part uuid mmc 0:2 uuid\0" \
++	"finduuid=if mmc dev 0; then part uuid mmc 0:2 uuid; elif mmc dev 1; then part uuid mmc 1:2 uuid; fi\0" \
+ 	"console=ttyO0,115200n8\0" \
+ 	"partitions=" \
+ 		"uuid_disk=${uuid_gpt_disk};" \
+-- 
+2.43.0
+

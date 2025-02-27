@@ -1,0 +1,12 @@
+[Unit]
+Description=Setup USB Gadget (usb0)
+After=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/sh /usr/bin/usb-gadget-setup.sh
+ExecStop=/bin/sh -c 'echo "" > /sys/kernel/config/usb_gadget/g1/UDC'
+
+[Install]
+WantedBy=multi-user.target
