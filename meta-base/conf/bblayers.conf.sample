@@ -13,36 +13,21 @@ BBLAYERS ?= " \
   "
 
 BBLAYERS += " \
-  /mnt/ssd/yocto/beaglebone/meta-arm/meta-arm \
-  /mnt/ssd/yocto/beaglebone/meta-arm/meta-arm-toolchain \
-  /mnt/ssd/yocto/beaglebone/meta-ti/meta-ti-bsp \
-  /mnt/ssd/yocto/beaglebone/meta-ti/meta-ti-extras \
-  /mnt/ssd/yocto/beaglebone/meta-openembedded/meta-oe \
-  /mnt/ssd/yocto/beaglebone/meta-openembedded/meta-python \
-  /mnt/ssd/yocto/beaglebone/meta-openembedded/meta-networking \
-  /mnt/ssd/yocto/beaglebone/meta-openembedded/meta-webserver \
+  /home/yocto/meta-arm/meta-arm \
+  /home/yocto/meta-arm/meta-arm-toolchain \
+  /home/yocto/meta-openembedded/meta-networking \
+  /home/yocto/meta-openembedded/meta-oe \
+  /home/yocto/meta-openembedded/meta-python \
+  /home/yocto/meta-openembedded/meta-webserver \
+  /home/yocto/meta-ti/meta-ti-bsp \
+  /home/yocto/meta-ti/meta-ti-extras \
   "
 
 BBLAYERS += " \
-  /mnt/ssd/yocto/beaglebone/meta-romsila \
-  "
-
-BBLAYERS += " \
-  /mnt/ssd/yocto/beaglebone/meta-helloly \
-  "
-
-BBLAYERS += " \
-  /mnt/ssd/yocto/beaglebone/meta-distrap \
-  "
-
-BBLAYERS += " \
-  /mnt/ssd/yocto/beaglebone/meta-heartbeat \
-  "
-
-BBLAYERS += " \
-  /mnt/ssd/yocto/beaglebone/meta-mylayer \
-  "
-
-BBLAYERS += " \
-  /mnt/ssd/yocto/beaglebone/meta-streamer \
+  /home/yocto/meta-emblincram/meta-base \
+  /home/yocto/meta-emblincram/meta-distrap \
+  /home/yocto/meta-emblincram/meta-heartbeat \
+  /home/yocto/meta-emblincram/meta-helloly \
+  /home/yocto/meta-emblincram/meta-mylayer \
+  /home/yocto/meta-emblincram/meta-streamer \
   "
