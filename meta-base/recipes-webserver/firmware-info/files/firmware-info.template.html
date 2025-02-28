@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="refresh" content="1">
     <meta charset="UTF-8">
     <title>Firmware Info</title>
     <style>
@@ -12,11 +15,11 @@
 <body>
     <div class="container">
         <h1>Firmware Information</h1>
-        <p><strong>Build-Zeit:</strong> </p>
-        <p><strong>Yocto-Version:</strong> </p>
-        <p><strong>Build-Host:</strong> </p>
-        <p><strong>Kernel-Version:</strong> 6.8.0-52-generic</p>
-        <p><strong>Git Commit:</strong> unknown</p>
+        <p><strong>Build-Zeit:</strong> @BUILD_TIME@</p>
+        <p><strong>Yocto-Version:</strong> @YOCTO_VERSION@</p>
+        <p><strong>Build-Host:</strong> @BUILD_HOST@</p>
+        <p><strong>Kernel-Version:</strong> @KERNEL_VERSION@</p>
+        <p><strong>Git Commit:</strong> @GIT_COMMIT@</p>
     </div>
 </body>
 </html>

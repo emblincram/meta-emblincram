@@ -295,6 +295,7 @@ IMAGE_INSTALL:append = " nginx"
 IMAGE_INSTALL:append = " python3-flask"
 IMAGE_INSTALL:append = " python3-netifaces"
 IMAGE_INSTALL:append = " flask-service"
+IMAGE_INSTALL:append = " firmware-info"
 # --------------------------------------------------
 
 # --------------------------------------------------

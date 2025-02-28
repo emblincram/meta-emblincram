@@ -16,3 +16,6 @@ do_install() {
 
 FILES:${PN} = "/opt/flask/flask-app.py ${systemd_system_unitdir}/flask.service"
 SYSTEMD_SERVICE:${PN} = "flask.service"
+
+inherit systemd
+SYSTEMD_AUTO_ENABLE:${PN} = "enable"

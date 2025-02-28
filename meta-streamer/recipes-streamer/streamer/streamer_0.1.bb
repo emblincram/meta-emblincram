@@ -17,7 +17,6 @@ python do_display_banner() {
 }
 addtask display_banner before do_build
 
-# Hier wird das externe Repository eingebunden
 SRC_URI = "git://github.com/emblincram/streamer.git;branch=main;protocol=ssh"
 #SRC_URI = "git:///mnt/ssd/work/streamer;branch=main;protocol=file"
 

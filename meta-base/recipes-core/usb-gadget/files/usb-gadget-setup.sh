@@ -17,6 +17,8 @@ echo "0123456789" > strings/0x409/serialnumber
 echo "BeagleBone" > strings/0x409/manufacturer
 echo "USB Network Gadget" > strings/0x409/product
 
+# echo "02:42:c0:a8:2a:01" > /sys/class/net/usb0/address
+
 # Ethernet über USB konfigurieren
 mkdir -p functions/ecm.usb0
 
@@ -26,6 +28,14 @@ rm -rf functions/rndis.usb0
 
 mkdir -p configs/c.1/strings/0x409
 echo "Config 1" > configs/c.1/strings/0x409/configuration
+
+# power down
+#echo 0 > configs/c.1/bmAttributes
+#echo 0 > configs/c.1/MaxPower
+#echo 100 > configs/c.1/MaxPower
+
+# power management ?
+# echo "self-powered" > os_desc/qw_sign
 
 # Ethernet-Modus wählen (entweder ECM oder RNDIS)
 ln -s functions/ecm.usb0 configs/c.1/

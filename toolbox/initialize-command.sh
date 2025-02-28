@@ -49,8 +49,7 @@ create_directory ${WORKSPACE_PATH}/build
 
 # yocto layer for beagle-x15
 
-clone_and_checkout "git://git.yoctoproject.org/poky" "${WORKSPACE_PATH}/poky" "kirkstone"
-clone_and_checkout "git://git.yoctoproject.org/meta-ti" "${WORKSPACE_PATH}/meta-ti" "kirkstone"
-clone_and_checkout "git://git.yoctoproject.org/meta-arm" "${WORKSPACE_PATH}/meta-arm" "kirkstone"
-clone_and_checkout "git://git.openembedded.org/meta-openembedded.git" "${WORKSPACE_PATH}/meta-openembedded" "kirkstone"
-
+clone_and_checkout "https://git.yoctoproject.org/poky" "${WORKSPACE_PATH}/poky" "kirkstone"
+clone_and_checkout "https://git.yoctoproject.org/meta-ti" "${WORKSPACE_PATH}/meta-ti" "kirkstone"
+clone_and_checkout "https://git.yoctoproject.org/meta-arm" "${WORKSPACE_PATH}/meta-arm" "kirkstone"
+clone_and_checkout "https://github.com/openembedded/meta-openembedded.git" "${WORKSPACE_PATH}/meta-openembedded" "kirkstone"
