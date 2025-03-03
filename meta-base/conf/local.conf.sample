@@ -282,6 +282,8 @@ CONF_VERSION = "2"
 IMAGE_FEATURES += "ssh-server-dropbear"
 ENABLE_UART = "1"
 
+IMAGE_FEATURES:remove = "ssh-server-openssh"
+
 IMAGE_INSTALL:append = " figlet"
 IMAGE_INSTALL:append = " gdbserver"
 
@@ -295,6 +297,7 @@ IMAGE_INSTALL:append = " nginx"
 IMAGE_INSTALL:append = " python3-flask"
 IMAGE_INSTALL:append = " python3-netifaces"
 IMAGE_INSTALL:append = " flask-service"
+IMAGE_INSTALL:append = " python3-gunicorn"
 IMAGE_INSTALL:append = " firmware-info"
 # --------------------------------------------------
 
