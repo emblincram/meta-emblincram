@@ -1,18 +1,18 @@
 [Unit]
 Description=Flask API Service
-#After=network.target
+After=network.target
 #Requires=sys-subsystem-net-devices-usb0.device
-After=network-online.target
-Wants=network-online.target
+#After=network-online.target
+#Wants=network-online.target
 
 [Service]
-ExecStartPre=/bin/sleep 5
-ExecStart=/usr/bin/python3 /opt/flask/flask-app.py
-Restart=always
-RestartSec=5    
-StartLimitInterval=0
 User=root
-Environment=SYSTEMD_LOG_LEVEL=debug
+WorkingDirectory=/opt/flask
+ExecStart=/usr/bin/python3 -m gunicorn -w 4 -b 0.0.0.0:5000 flask-app:app
+Restart=always
+#RestartSec=5    
+StartLimitInterval=0
+#Environment=SYSTEMD_LOG_LEVEL=debug
 
 [Install]
 WantedBy=multi-user.target
