@@ -36,8 +36,8 @@
 #
 # This sets the default machine to be qemux86-64 if no other machine is selected:
 #MACHINE ??= "qemux86-64"
-#MACHINE = "beaglebone"
-MACHINE = "beagle-x15"
+MACHINE ?= "beaglebone"
+#MACHINE = "beagle-x15"
 
 #
 # Where to place downloads
@@ -286,12 +286,12 @@ IMAGE_FEATURES:remove = "ssh-server-openssh"
 
 IMAGE_INSTALL:append = " figlet"
 IMAGE_INSTALL:append = " gdbserver"
+IMAGE_INSTALL:append = " dnsmasq"
 
 # --------------------------------------------------
 # USB gadged stuff
 # --------------------------------------------------
 IMAGE_INSTALL:append = " libusbgx"
-IMAGE_INSTALL:append = " dnsmasq"
 IMAGE_INSTALL:append = " usb-gadget"
 IMAGE_INSTALL:append = " nginx"
 IMAGE_INSTALL:append = " python3-flask"
@@ -299,6 +299,7 @@ IMAGE_INSTALL:append = " python3-netifaces"
 IMAGE_INSTALL:append = " flask-service"
 IMAGE_INSTALL:append = " python3-gunicorn"
 IMAGE_INSTALL:append = " firmware-info"
+#IMAGE_INSTALL:append = " ttyd"
 # --------------------------------------------------
 
 # --------------------------------------------------
@@ -321,3 +322,7 @@ DISTRO_FEATURES:append = " systemd"
 VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = ""
 DISTRO_FEATURES:remove = "sysvinit"
+DISTRO_FEATURES:append = " usrmerge"
+
+IMAGE_FEATURES += "allow-root-login"
+ROOT_HOME = "/root"

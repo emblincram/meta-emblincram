@@ -18,8 +18,8 @@ python do_display_banner() {
 
 addtask display_banner before do_build
 
-SRC_URI = "git://github.com/emblincram/heartbeat.git;branch=main;protocol=ssh"
-#SRC_URI = "git:///mnt/ssd/work/heartbeat;branch=main;protocol=file"
+#SRC_URI = "git://github.com/emblincram/heartbeat.git;branch=main;protocol=ssh"
+SRC_URI = "git:///home/yocto/app/heartbeat;branch=main;protocol=file"
 
 SRC_URI += "file://heartbeat.service"
 

@@ -20,6 +20,7 @@ addtask display_banner before do_build
 
 # Hier wird das externe Repository eingebunden
 SRC_URI = "git://github.com/emblincram/helloly.git;branch=main;protocol=ssh"
+#SRC_URI = "https://github.com/emblincram/helloly.git;branch=main;protocol=https"
 
 SRCREV = "7d50bede0b0d7c997d41e1bf26711e0f725e52ab"
 

@@ -7,9 +7,9 @@ BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
 BBLAYERS ?= " \
-  ##OEROOT##/meta \
-  ##OEROOT##/meta-poky \
-  ##OEROOT##/meta-yocto-bsp \
+  /home/yocto/poky/meta \
+  /home/yocto/poky/meta-poky \
+  /home/yocto/poky/meta-yocto-bsp \
   "
 
 BBLAYERS += " \
@@ -21,6 +21,7 @@ BBLAYERS += " \
   /home/yocto/meta-openembedded/meta-webserver \
   /home/yocto/meta-ti/meta-ti-bsp \
   /home/yocto/meta-ti/meta-ti-extras \
+  /home/yocto/meta-ti/meta-beagle \
   "
 
 BBLAYERS += " \

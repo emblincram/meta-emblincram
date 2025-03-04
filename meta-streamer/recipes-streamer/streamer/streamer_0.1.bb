@@ -12,15 +12,17 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 python do_display_banner() {
     bb.plain("***********************************************");
-    bb.plain(" Data store and streaming application");
+    bb.plain("Data store and streaming application");
     bb.plain("***********************************************");
 }
+
 addtask display_banner before do_build
 
 SRC_URI = "git://github.com/emblincram/streamer.git;branch=main;protocol=ssh"
 #SRC_URI = "git:///mnt/ssd/work/streamer;branch=main;protocol=file"
 
 SRC_URI += "file://streamer.service"
+
 SRCREV = "e26cac30b3dda437593089ca81e2e12e5ac89d58"
 
 PV = "1.0"
