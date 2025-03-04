@@ -1,0 +1,14 @@
+[Unit]
+Description=ttyd - Web-based Terminal
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ttyd -p 7681 -w /bin/sh
+Restart=always
+User=root
+StandardInput=tty
+StandardOutput=journal
+TTYPath=/dev/console
+
+[Install]
+WantedBy=multi-user.target
